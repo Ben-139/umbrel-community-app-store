@@ -1,23 +1,21 @@
-manifestVersion: 1
-id: sparkles-hello-world
-name: Hello World
-tagline: Replace this tagline with your app's tagline
-icon: https://svgur.com/i/mvA.svg
+smanifestVersion: 1
+id: Bensappstore-lancache
+name: Lan Cache
+tagline: A Local Cache for games and stuff
+icon: https://avatars.githubusercontent.com/u/16938914?s=200&v=4
 category: Development
 version: "1.0.0"
 port: 4000
 description: >-
-  Add your app's description here.
+  DISCLAMIER, THIS IS IN NO WAY AFFILIATED OR OWNED BY THE OFFICAL LAN CACHE TEAM, IT IS SIMPLY A PORT, I DO NOT OWN IT.
+  A simple and easy to use lan cache
 
-
-  You can also add newlines!
-
-developer: Umbrel
-website: https://umbrel.com
-submitter: Umbrel
-submission: https://github.com/getumbrel/umbrel-hello-world-app
-repo: https://github.com/getumbrel/umbrel-hello-world-app
-support: https://github.com/getumbrel/umbrel-hello-world-app/issues
+developer: Lan Cache team
+website: https://lancache.net/
+submitter: ben-139
+submission: 
+repo: https://github.com/Ben-139/umbrel-community-app-store
+support: 
 gallery:
   - https://i.imgur.com/yyVG0Jb.jpeg
   - https://i.imgur.com/yyVG0Jb.jpeg
