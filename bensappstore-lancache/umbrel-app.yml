@@ -13,16 +13,16 @@ description: >-
 developer: Lan Cache team
 website: https://lancache.net/
 submitter: ben-139
-submission: 
+submission: aa
 repo: https://github.com/Ben-139/umbrel-community-app-store
-support: 
+support: aa
 gallery:
   - https://i.imgur.com/yyVG0Jb.jpeg
   - https://i.imgur.com/yyVG0Jb.jpeg
   - https://i.imgur.com/yyVG0Jb.jpeg
 releaseNotes: >-
   Add what's new in the latest version of your app here.
-dependencies: []
-path: ""
+dependencies: [s]
+path: "s"
 defaultUsername: ""
 defaultPassword: ""
