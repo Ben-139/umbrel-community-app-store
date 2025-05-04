@@ -1,14 +1,30 @@
-version: "3.7"
-
+x-restart-policy: &restart-policy "no"
 services:
+  dns:
+    image: lancachenet/lancache-dns:latest
+    env_file: .env
+    restart: *restart-policy
+    ports:
+      - ${DNS_BIND_IP}:53:53/udp
+      - ${DNS_BIND_IP}:53:53/tcp
 
-  app_proxy:
-    environment:
-      # The format here is: <app-id>_<docker-service-name>_1
-      APP_HOST: sparkles-hello-world_server_1
-      APP_PORT: 3000
-    
-  server:
-    image: getumbrel/community-app-store-hello-world:latest
-    user: "1000:1000"
-    init: true
+## HTTPS requests are now handled in monolithic directly
+## you could choose to return to sniproxy if desired
+#
+#  sniproxy:
+#    image: lancachenet/sniproxy:latest
+#    env_file: .env
+#    restart: *restart-policy
+#    ports:
+#      - 443:443/tcp
+
+  monolithic:
+    image: lancachenet/monolithic:latest
+    env_file: .env
+    restart: *restart-policy
+    ports:
+      - 80:80/tcp
+      - 443:443/tcp
+    volumes:
+      - ${CACHE_ROOT}/cache:/data/cache
+      - ${CACHE_ROOT}/logs:/data/logs
